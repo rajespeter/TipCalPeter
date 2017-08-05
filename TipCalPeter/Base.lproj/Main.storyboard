@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="twR-JX-vAo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TipZ-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TipVC" customModule="TipCalPeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="1ii-nT-lFt">
+                                <rect key="frame" x="19" y="193.5" width="338" height="268.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ApV-0m-Ead">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing Amount $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vSY-kU-jPh">
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="50"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="23"/>
+                                                <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="he7-te-Uja">
+                                                <rect key="frame" x="169" y="0.0" width="169" height="50"/>
+                                                <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="amountEntered:" destination="BYZ-38-t0r" eventType="editingChanged" id="0e0-xA-tcX"/>
+                                                    <action selector="amountEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="1aE-bH-hBC"/>
+                                                    <action selector="amountEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="6o2-Kz-eY7"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hUX-W4-3aR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-zM-CMp">
+                                        <rect key="frame" x="0.0" y="77" width="338" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64P-jX-bAF">
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="50"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                                <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xu5-Wt-lyU">
+                                                <rect key="frame" x="169" y="0.0" width="169" height="50"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
+                                                <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o1e-Of-AnJ">
+                                        <rect key="frame" x="0.0" y="154" width="338" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-hN-Oad">
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="50"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                                                <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ulS-0h-IiG">
+                                                <rect key="frame" x="169" y="0.0" width="169" height="50"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
+                                                <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AnR-xi-GUj">
+                                        <rect key="frame" x="0.0" y="231" width="338" height="38.5"/>
+                                        <segments>
+                                            <segment title="10%"/>
+                                            <segment title="15%"/>
+                                            <segment title="25%"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="percentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NlI-gS-DJT"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="o1e-Of-AnJ" firstAttribute="width" secondItem="uNh-zM-CMp" secondAttribute="width" id="bHi-tC-CXh"/>
+                                    <constraint firstItem="o1e-Of-AnJ" firstAttribute="height" secondItem="uNh-zM-CMp" secondAttribute="height" id="pTs-NE-CZ2"/>
+                                    <constraint firstItem="uNh-zM-CMp" firstAttribute="height" secondItem="ApV-0m-Ead" secondAttribute="height" id="wRc-93-Pfc"/>
+                                    <constraint firstItem="AnR-xi-GUj" firstAttribute="height" secondItem="o1e-Of-AnJ" secondAttribute="height" multiplier="0.75" id="xoG-Un-1me"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulp-6W-n6A">
+                                <rect key="frame" x="0.0" y="330" width="375" height="7"/>
+                                <color key="backgroundColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="hu7-Vz-THk"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IjR-WP-evH">
+                                <rect key="frame" x="0.0" y="89" width="375" height="85.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Making A Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIK-gc-i3c">
+                                        <rect key="frame" x="60" y="0.0" width="255.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                        <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ku-ov-JfD">
+                                        <rect key="frame" x="160" y="30.5" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Fx7-ax-k3a"/>
+                                            <constraint firstAttribute="width" constant="55" id="sME-TW-buo"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IjR-WP-evH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="Fdo-NF-dQf"/>
+                            <constraint firstItem="ulp-6W-n6A" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="NBo-Hq-ceG"/>
+                            <constraint firstItem="1ii-nT-lFt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.98" id="Qdg-ES-Jqd"/>
+                            <constraint firstItem="IjR-WP-evH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ToT-wI-Crl"/>
+                            <constraint firstItem="1ii-nT-lFt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="iB3-Nz-ZYK"/>
+                            <constraint firstItem="ulp-6W-n6A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rR9-Ry-ZhF"/>
+                            <constraint firstItem="1ii-nT-lFt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sUq-6h-PbP"/>
+                            <constraint firstItem="IjR-WP-evH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="x5V-z7-MMj"/>
+                            <constraint firstItem="ulp-6W-n6A" firstAttribute="centerX" secondItem="1ii-nT-lFt" secondAttribute="centerX" id="zd2-Ha-th7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TipZ" id="of6-D1-uMu">
+                        <barButtonItem key="rightBarButtonItem" title="⚙" id="6BS-o3-s3r">
+                            <connections>
+                                <segue destination="heb-8d-Ras" kind="show" id="Sds-Hd-ZGX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="billedAmount" destination="he7-te-Uja" id="Sqq-Tv-n3S"/>
+                        <outlet property="emotion" destination="7ku-ov-JfD" id="Foi-l1-UiZ"/>
+                        <outlet property="percentOption" destination="AnR-xi-GUj" id="F84-o9-fvs"/>
+                        <outlet property="tip" destination="xu5-Wt-lyU" id="rsa-GE-vwt"/>
+                        <outlet property="total" destination="ulS-0h-IiG" id="IK0-DA-Mse"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="61.619190404797607"/>
+        </scene>
+        <!--SettingVC-->
+        <scene sceneID="s8c-88-qb2">
+            <objects>
+                <viewController id="heb-8d-Ras" customClass="SettingVC" customModule="TipCalPeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Pz-7c-8lL"/>
+                        <viewControllerLayoutGuide type="bottom" id="EnF-Y8-imO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cCn-Ic-bb6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="N7Y-Ul-BSB">
+                                <rect key="frame" x="28.5" y="281" width="319" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tip Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="chM-3Z-8D6">
+                                        <rect key="frame" x="35.5" y="0.0" width="248" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="qeL-Lf-6DC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="23"/>
+                                        <color key="textColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-1E-7mw">
+                                        <rect key="frame" x="0.0" y="65" width="319" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="V97-WD-37y"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="10%"/>
+                                            <segment title="15%"/>
+                                            <segment title="25%"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.36743304129999999" green="0.3709777594" blue="0.59899067880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="percentChanged:" destination="heb-8d-Ras" eventType="valueChanged" id="axo-bY-6CR"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TmM-1E-7mw" firstAttribute="width" secondItem="N7Y-Ul-BSB" secondAttribute="width" id="8lb-Vw-R0R"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N7Y-Ul-BSB" firstAttribute="centerX" secondItem="cCn-Ic-bb6" secondAttribute="centerX" id="055-aw-X4e"/>
+                            <constraint firstItem="N7Y-Ul-BSB" firstAttribute="width" secondItem="cCn-Ic-bb6" secondAttribute="width" multiplier="0.85" id="AtT-KR-FfS"/>
+                            <constraint firstItem="N7Y-Ul-BSB" firstAttribute="centerY" secondItem="cCn-Ic-bb6" secondAttribute="centerY" id="tQS-5S-0MI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="percentOption" destination="TmM-1E-7mw" id="Vdv-pm-EgQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZP1-QW-mDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597" y="57"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u9R-I5-u6e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="twR-JX-vAo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JXM-R7-MJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SU8-z6-pMB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1d-sX-HAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="61.619190404797607"/>
+        </scene>
+    </scenes>
+</document>
