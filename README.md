@@ -38,35 +38,27 @@ As part of your pre-work submission, please reflect on the app and answer the fo
 **Question 1**: "What are your reactions to the iOS app development platform so far? How would you describe outlets and actions to another developer? Bonus: any idea how they are being implemented under the hood? (It might give you some ideas if you right-click on the Storyboard and click Open As->Source Code")
 
 **
-it is very matured way of doing mobile stuff , i find it very stable and lot of help online/youtube . dragging and dropping is pretty annoying , the other way of building every thing in code
-is very hard to maintain. lot of UI , i like some of them some of them like date picker and ui picker doesn't look great
-they should provide some autocomplete ui options there might be i dont know hope you guys will teach me that ;-)
-swift is very easy to read they have got ridden of lot of unwanted programing requirements, xcode tool is very helpfull in assist frame work the debug is ok
-lot of times it is stuck in the some internal libraries , git hub is a tressure chest lot of libraries the world is full of good hearted developers
+It is very matured way of doing mobile stuff , i find it very stable and lot of help online/youtube . Dragging and dropping is pretty annoying , the other way of building everything in code is very hard to maintain. lot of UI  option they look pretty and nice at runtime l
+they should provide some autocomplete ui options there might be some already i don’t know hope you guys will teach me that ;-)
+swift is very easy to read they have got ridden of lot of unwanted programing requirements, xcode tool is very helpful in assist frame work the debug is ok, lot of times it is stuck in the some internal libraries, git hub is a treasure chest lot of libraries the world is full of good hearted developers
 
 
 
 outlets 
-they seem to be inbuilt classes with each having their own variables , methods . They use lot of enum's 
-actions are more like function good reuse
-ah the storyboard is big xml file , apple seem to be parsing it and building the ui and interfaces
-i think lot of framework does this approach 
+They seem to be inbuilt classes with each having their own variables, methods. They use lot of enum's 
+actions are more like function good reuse.
+ah the storyboard is big xml file, apple seem to be parsing it and building the ui and interfaces
+each node represents an object and their attributes are the objects feature 
+
 **  
 
 Question 2: "Swift uses [Automatic Reference Counting](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID49) (ARC), which is not a garbage collector, to manage memory. Can you explain how you can get a strong reference cycle for closures?
  (There's a section explaining this concept in the link, how would you summarize as simply as possible?)"
 
-**swift manages memory by releasing the objects once their life time ends , but it also uses counter to make sure the objects are not active 
-these counters depends on the references made to those objects it increments when a reference is made and does the revers when it deinit (setting it to nil)
-once the counter reaches zero it kicks the object out of memory we do not need to worry about memory management. now there are cases where we need to make sure there is not any circle references
-
-it can happen between classes having one to one relationships example person and apartment so developers where they get into strong reference mode and releasing one object does not releases the other
-we  need to use week or unowned references to avoid such use cases:**  .
-now closure also falls unders the same case even though they are single object , these properties try to capture and operate on the values of their own class
-so they end up in circle reference . it is like kid trying to get pocket money from parent in home, even after giving the money momy is thinking daddy is at home
-because kid has got dads money , we need to educate mom the the money is unowned or week reference it is not equal to kid holding dads hand
-
-
+**Swift manages memory by releasing the objects once their life time ends, but it also uses counter to make sure the objects are not active when they release , these counters depends on the references made to those objects it increments when a reference is made and does the revers when it deinit (setting it to nil) we do not need to worry about memory management. There are cases where we need to make sure there is not any circle/strong references
+It can happen between classes having one to one relationships example person and apartment so developers where they get into strong reference mode and releasing one object does not releases the other we need to use week or unowned references to avoid such use cases .
+Closure can also falls under the same case even though they are single object , these properties try to capture and operate on the values of their own class , so they end up in circle reference . It is like mom thinks kid is here just seeing his shirt , we need to educate shirt covers body but seeing that does not mean he is there shirt has a week reference it is ready for laundry if the kids is not there .
+**
 
 
 
